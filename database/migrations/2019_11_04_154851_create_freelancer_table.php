@@ -13,7 +13,7 @@ class CreateFreelancerTable extends Migration
      */
     public function up()
     {
-        Schema::create('freelancer', function (Blueprint $table) {
+        Schema::create('freelancers', function (Blueprint $table) {
             $table->increments('freelancer_id');
             $table->string('name', 50);
             $table->integer('price');
@@ -30,6 +30,6 @@ class CreateFreelancerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('freelancer');
+        Schema::dropIfExists('freelancers');
     }
 }
